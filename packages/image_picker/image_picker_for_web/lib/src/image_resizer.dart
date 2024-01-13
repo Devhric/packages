@@ -17,6 +17,12 @@ class ImageResizer {
   /// (Does not support gif images)
   Future<XFile> resizeImageIfNeeded(XFile file, double? maxWidth,
       double? maxHeight, int? imageQuality) async {
+    
+    final fileSize = await file.length();
+      if (fileSize <= 2000000) {
+        return file;
+      }
+    
     if (!imageResizeNeeded(maxWidth, maxHeight, imageQuality) ||
         file.mimeType == 'image/gif') {
       // Implement maxWidth and maxHeight for image/gif
