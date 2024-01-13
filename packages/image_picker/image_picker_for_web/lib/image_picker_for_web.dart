@@ -13,7 +13,7 @@ import 'package:mime/mime.dart' as mime;
 import 'src/image_resizer.dart';
 
 const String _kImagePickerInputsDomId = '__image_picker_web-file-input';
-const String _kAcceptImageMimeType = 'image/*';
+const String _kAcceptImageMimeType = 'image/jpeg,image/png,image/webp';
 const String _kAcceptVideoMimeType = 'video/3gpp,video/x-m4v,video/mp4,video/*';
 
 /// The web implementation of [ImagePickerPlatform].
